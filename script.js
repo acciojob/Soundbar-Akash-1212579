@@ -7,7 +7,7 @@ sounds.forEach((sound) => {
   // hidden audio element
   const audio = document.createElement('audio');
   audio.id = sound;
-  audio.src = ./sounds/${sound}.mp3;
+  audio.src = `./sounds/${sound}.mp3`;
   audio.preload = 'auto';
   document.body.appendChild(audio);
 
@@ -15,7 +15,7 @@ sounds.forEach((sound) => {
   const btn = document.createElement('button');
   btn.className = 'btn';
   btn.textContent = sound;
-
+	
   btn.addEventListener('click', () => {
     stopSounds();
     const el = document.getElementById(sound);
